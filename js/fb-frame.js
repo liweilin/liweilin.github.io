@@ -1,0 +1,1 @@
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0&appId=794423563925206&autoLogAppEvents=1" nonce="MXGLwZlR"></script>

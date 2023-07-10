@@ -1,0 +1,120 @@
+        <div class="colophon-top">
+            <section class="reservation" data-aos=" flip-up">
+                <header>
+                    <img src="../image/ci/ci-horizontal.png">
+                    <small>專人聯繫 完成預約</small>
+                </header>
+                <form action="#">
+                    <div class="aicare-textfield">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="請輸入姓名" required>
+                    </div>
+                    <div class="aicare-selector">
+                        <label for="sex">性別</label>
+                        <select>
+                            <option value="1" selected>男</option>
+                            <option value="2">女</option>
+                            
+                        </select>
+                    </div>
+                    <div class="aicare-textfield">
+                        <label for="phone">聯絡手機</label>
+                        <input type="text" id="phone" max="10" onkeyup="this.value=this.value.replace(/[^0-9+]+/,'')"
+                            placeholder="請輸入聯絡電話/手機" pattern="\d*" required>
+                    </div>
+                    <div class="aicare-textfield">
+                        <label for="phone">家用電話</label>
+                        <input type="text" id="phone" max="10" onkeyup="this.value=this.value.replace(/[^0-9+]+/,'')"
+                            placeholder="請輸入聯絡電話/手機" pattern="\d*" required>
+                    </div>
+                    <div class="aicare-selector">
+                        <label for="reserve">預約分院</label>
+                        <select id="reserve" required>
+                            <option value="0" selected>請選擇分院</option>
+                            <option value="1">忠孝新生分院</option>
+                            <option value="2">天母分院</option>
+                            <option value="3">民生分院</option>
+                            <option value="4">內湖分院</option>
+                            <option value="5">板橋分院</option>
+                            <option value="6">雙和分院</option>
+                            <option value="7">林口分院</option>
+                        </select>
+                    </div>
+                    <div class="aicare-selector">
+                        <label for="contact">可聯絡的時間</label>
+                        <select id="contact" required>
+                            <option value="0" selected>請選擇聯絡時間</option>
+                            <option value="1">09:00 ~ 12:00</option>
+                            <option value="2">12:00 ~ 18:00</option>
+                            <option value="3">18:00 ~ 21:00</option>
+                        </select>
+                    </div>
+                    <div class="aicare-textfield">
+                        <label for="recommend">推薦人</label>
+                        <input type="text" id="recommend" placeholder="請填寫推薦人（非必填）">
+                    </div>
+                    <div class="aicare-checkbox">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">我已同意注意事項及個資告知事項</label>
+                    </div>
+                    <!-- 放檢測機器人 -->
+                    <div></div>
+                    <footer>
+                        <small>( 請注意！實際預約需在專人聯繫確認後，才算完成喔！ )</small>
+                        <button type="button" class="aicare-button">確認送出</button>
+                    </footer>
+                </form>
+            </section>
+        </div>
+        <div class="colophon-bottom">
+            <section class="sitemap">
+                <nav>
+                    <a href="index.html">首頁</a>
+                </nav>
+                <div class="s-menu">
+                    <nav>
+                        治療服務
+                    </nav>
+                    <nav>
+                        <a href="prolotherapy.html">增生治療</a>
+                    </nav>
+                    <nav>
+                        <a href="physiotherapy.html">物理治療</a>
+                    </nav>
+                    <nav>
+                        <a href="course.html">運動課程</a>
+                    </nav>
+                </div>
+                
+                <nav>
+                    <a href="team.html">專業團隊</a>
+                </nav>
+                <nav>
+                    <a href="location.html">分院介紹</a>
+                </nav>
+                <nav>
+                    <a href="blog.html">疼痛小百科</a>
+                </nav>
+            </section>
+            <section class="contact">
+                <article class="customer-service">
+                    <h4><i class="fa-solid fa-headset icon"></i>客服專線</h4>
+                    <a href="tel:0227014155">02-2701-4155</a>
+                </article>
+                <article class="service-hours">
+                    <h4><i class="fa-solid fa-clock icon"></i>服務時間</h4>
+                    <div>上午 09:00am ~ 12:30pm</div>
+                    <div>下午 13:30pm ~ 17:00pm</div>
+                    <div>晚上 18:00pm ~ 21:30pm</div>
+                </article>
+                <div class="qrcode">
+                    <a href="https://lin.ee/6S3hww9" target="_blank">
+                        <img src="../image/other/lineqrcode.svg">
+                    </a>
+                    <a href="https://www.facebook.com/AICare.PT" target="_blank">
+                        <img src="../image/other/fbqrcode.svg">
+                    </a>
+                </div>
+            </section>
+        </div>
+        <small class="copyright">生生優動版權所有 © All Rights Reserved.</small>

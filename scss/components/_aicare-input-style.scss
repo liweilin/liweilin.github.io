@@ -1,0 +1,32 @@
+.aicare-textfield {
+  display: grid;
+  gap: 6px;
+
+  &>label {
+    font-size: 1.125rem;
+  }
+
+  &>input {
+    background: transparent;
+    border: 1px solid var(--fontColor);
+    padding: 6px 12px;
+  }
+}
+
+.aicare-selector {
+  display: grid;
+  gap: 6px;
+
+  &>label {
+    font-size: 1.125rem;
+  }
+
+  &>select {
+    background: transparent;
+    border: 1px solid var(--fontColor);
+    border-radius: 5px;
+    padding: 2px 12px;
+
+    &>option {}
+  }
+}

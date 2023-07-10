@@ -1,0 +1,266 @@
+.team-member{
+  margin-top: 60px;
+  padding-top: 40px;
+  color: var(--black);
+  @include flexbox(column,center,start);
+  @include for-phone{
+    padding-top: 16px;
+  }
+
+  h1{
+    position: relative;
+    color: var(--black);
+    margin: 40px auto 64px auto;
+    &::after{
+      content: "";
+      position: absolute;
+      background: var(--orange);
+      width: 100%;
+      height: 3px;
+      bottom: -10px;
+      left: 0px;
+    }
+  }
+
+  .team-panel{
+    input[type="radio"] {
+      @include s-tabs(1.25rem,"#form-tab", ".panel", "#panel");
+    }
+    width: 100%;
+    @include flexbox(row,center,center);
+    gap: 16px;
+    flex-wrap: wrap;
+    @include for-phone{
+      input[type="radio"] + label{
+        width: 28%;
+      }
+    }
+    .panel{
+      width: 100vw;
+      height: fit-content;
+      position: relative;
+      overflow-x: hidden;
+
+      .swiper-button-next,.swiper-button-prev{
+        color: var(--fontColor);
+        top: 60%;
+        @include for-phone{
+          top: 30%;
+        }
+      }
+      
+      &-table{
+        display: none;
+        width: 100%;
+        @include ease(0.2s);
+
+        .group{
+          width: 100%;
+          gap: 16px;
+          padding: 16px 0;
+          margin-top: 20px;
+          .swiper-wrapper{
+            width: fit-content;
+          }
+          .person{
+            @include flexbox(column,center,center);
+            padding: 8px 16px;
+            gap: 4px;
+            cursor: pointer;
+            img,.no-img{
+              border-radius: 50%;
+              border: none;
+              background-color: var(--lightGrayf9);
+              width: 60px;
+              height: 60px;
+              margin-bottom: 4px;
+            }
+            .name{
+              font-weight: 400;
+              letter-spacing: 0.5px;
+              font-size: 1.125rem;
+              color: var(--fontColor);
+            }
+            .title{
+              font-size: 1rem;
+              color: var(--fontColor);
+              font-weight: 300;
+            }
+          }
+        }
+        .group-at,.group-pt{
+          .swiper-slide-thumb-active img,.swiper-slide-thumb-active .no-img{
+            outline: 2px solid var(--orange);
+          }
+        }
+        .swipe {
+          width: 100%;
+          .swiper-pagination{
+            color: var(--fontColor);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: unset;
+            height: 0px;
+          }
+          .swiper-wrapper{
+            width: 100vw;
+          }
+          .swiper-slide{
+            background: linear-gradient(225deg, #E3E8EB 0%, #E3E8EB 20%, #D2DADD 35%);
+            padding: 0 100px;
+            height: 520px;
+            @include flexbox(row,end,center);
+            @include for-pad{
+              padding: 0px;
+              height: 40vh;
+            }
+            @include for-phone{
+              @include flexbox(column,center,center);
+              height: fit-content;
+            }
+
+            .wording{
+              width: 50%;
+              height: 100%;
+              padding: 40px 0 16px 0;
+              @include for-pad{
+                padding: 32px 0;
+                width: 40%;
+              }
+              @include for-phone{
+                width: 100%;
+                padding: 32px 24px 16px 24px;
+                border-top: 1px solid var(--border);
+              }
+              .big{
+                margin-bottom: 40px;
+                @include for-pad{
+                  margin-bottom: 24px;
+                }
+                h2{
+                  font-size: 2.5rem;
+                  margin-bottom: 8px;
+                }
+                .title{
+                  font-size: 1.25rem;
+                  color: var(--fontColor);
+                  letter-spacing: 0.5px;
+                }
+              }
+              .small{
+                @include grid(row,1fr 1fr,1fr 1fr,unset,32px);
+                @include mac-scrollbar-style;
+                height: 70%;
+                overflow: auto;
+                @include for-pad{
+                  @include grid(row,1fr,repeat(4,auto),unset,16px);
+                }
+                @include for-phone{
+                  height: fit-content;
+                  max-height: 50vh;
+                }
+                .item{
+                  h3{
+                    font-size: 1.75rem;
+                    margin-bottom: 8px;
+                  }
+                  ul{
+                    font-size: 1.25rem;
+                    letter-spacing: 0.5px;
+                    line-height: 1.5;
+                    font-weight: 300;
+                    a{
+                      color: var(--black);
+                      border-bottom: 1px solid var(--fontColor);
+                    }
+                  }
+                }
+              }
+            }
+            img,.no-img{
+              height: max-content;
+               max-width: 50vw;
+               width: fit-content;
+
+              @include for-pad{
+                height: 100%;
+                width: fit-content;
+              }
+              @include for-phone{
+                width: 100%;
+                height: 100vw;
+                max-width: unset;
+
+              }
+            }
+          }
+        }
+        &:last-child{
+          .wrapper{
+            width: 100%;
+            background: linear-gradient(225deg, #E3E8EB 0%, #E3E8EB 20%, #D2DADD 35%);
+            padding: 0 100px;
+            height: 520px;
+            @include flexbox(row,end,center);
+            @include for-phone{
+              @include flexbox(column,center,center);
+              height: fit-content;
+              padding: 0;
+            }
+
+
+            img{
+              height: max-content;
+               max-width: 50vw;
+               width: fit-content;
+               @include for-phone{
+                width: 100%;
+                height: 100vw;
+                max-width: unset;
+               }
+            }
+            .wording{
+              width: 50%;
+              height: 100%;
+              padding: 40px 0 16px 0;
+              @include for-pad{
+                padding: 32px 0;
+                width: 40%;
+              }
+              @include for-phone{
+                width: 100%;
+                padding: 32px 24px 16px 24px;
+                border-top: 1px solid var(--border);
+              }
+                h2{
+                  font-size: 2.5rem;
+                  margin-bottom: 40px;
+
+                }
+                .title{
+                  font-size: 1.25rem;
+                  color: var(--fontColor);
+                  letter-spacing: 0.5px;
+                  @include mac-scrollbar-style;
+                  height: 70%;
+                  overflow: auto;
+
+                  @include for-phone{
+                    width: 100%;
+                    padding: 0;
+                    border-top: 1px solid var(--border);
+                  }
+
+                  p{
+                    margin-bottom: 24px;
+                  }
+                }
+              }
+          }
+      }
+    }
+    }
+  }
+}

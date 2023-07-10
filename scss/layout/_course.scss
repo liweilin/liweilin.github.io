@@ -1,0 +1,81 @@
+.course{
+  width: 100%;
+  margin-top: 40px;
+  color: var(--black);
+  @include flexbox(column,center,start);
+
+  span.highlight{
+    background-color: var(--lightGreen);
+    padding: 0 2px;
+    font-weight: 400;
+  }
+  .cover{
+    background:url("../../image/treat/course_cover.jpg") no-repeat fixed center;
+    background-size: cover;
+    @include flexbox(row,center,center);
+    width: 100%;
+    .main-point{
+      padding: 32px;
+      background-color: var(--lightGreen);
+      box-shadow: 0px 25px 60px -15px rgba(0, 0, 0, 0.15);
+      margin: 200px auto;
+      @include for-pad{
+        background-size: auto;
+      }
+      @include for-phone{
+        box-shadow: 0px 10px 30px -15px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+  .content{
+    @include grid(row,1fr 3fr,auto,unset,0);
+    @include for-pad{
+      @include grid(column,auto,50vh 1fr,unset,0);
+    }
+    img{
+      object-fit: cover;
+    }
+    article{
+      padding: 64px;
+      @include for-phone{
+        padding: 20px;
+      }
+      h2{
+        font-size: 2.5rem;
+        margin-bottom: 32px;
+        line-height: 1.5;
+        @include for-phone{
+          font-size: 2rem;
+        }
+      }
+      p{
+        margin-bottom: 32px;
+      }
+      ul{
+        @include grid(column, auto,repeat(2,1fr), unset, 1px);
+        @include for-pad{
+        }
+        li{
+          width: 100%;
+          border: unset;
+          gap: 8px;
+          @include flexbox(column, start, start);
+          h3{
+            font-size: 1.75rem;
+            margin-bottom: 16px;
+            background-color: var(--lightGreen);
+            padding: 4px;
+            line-height: 1.2;
+            @include for-phone{
+              margin-bottom: 16px;
+              font-size: 1.5rem;
+            }
+          }
+          .description{
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

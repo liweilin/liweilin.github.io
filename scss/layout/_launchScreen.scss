@@ -1,0 +1,144 @@
+.launchScreen {
+  position: fixed;
+  background: var(--white);
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  @include ease(0.2s);
+
+  .ci {
+    @include flexbox-gap(column, center, center, 3px);
+    height: 100%;
+    @include ease(0.2s);
+
+    &>object {
+      height: 10%;
+      @include ease(0.2s);
+
+      &:nth-child(2) {
+        height: 5%;
+      }
+
+      &:last-child {
+        height: 2%;
+      }
+    }
+  }
+
+  .trans {
+    animation: trans 2s ease forwards;
+
+    @include for-largedesktop {
+      animation: trans_largedesktop 2s ease forwards;
+    }
+
+    @include for-pro-12-p{
+      animation: trans_pro-12-p 2s ease forwards;
+    }
+
+    @include for-pro-10-p{
+      animation: trans_pro-10-p 2s ease forwards;
+    }
+
+    @include for-pro-10-l{
+      animation: trans_pro-10-l 2s ease forwards;
+    }
+
+    @include for-desktop {
+      animation: trans_desktop 2s ease forwards;
+    }
+
+    @include for-largepad {
+      animation: trans_largepad 2s ease forwards;
+    }
+    @include for-phone {
+      animation: trans_phone 2s ease forwards;
+    }
+  }
+}
+
+.hide {
+  @include hide;
+}
+
+@keyframes trans {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.48) translate(-97%, -90%);
+  }
+}
+
+// ipad pro 12.5 portrait 
+@keyframes trans_pro-12-p {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.3) translate(-150%, -153%);
+  }
+}
+
+// ipad pro 10.5 portrait 
+@keyframes trans_pro-10-p {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.35) translate(-124%, -128%);
+  }
+}
+// ipad pro 10.5 landscape 
+@keyframes trans_pro-10-l {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.48) translate(-94%, -90%);
+  }
+}
+
+@keyframes trans_largedesktop {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.4) translate(-115%, -111%);
+  }
+}
+
+@keyframes trans_desktop {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.495) translate(-90%, -86%);
+  }
+}
+
+@keyframes trans_largepad {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.38) translate(-113%, -117%);
+  }
+}
+
+@keyframes trans_phone {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+
+  to {
+    transform: scale(0.43) translate(-89%, -102%);
+  }
+}

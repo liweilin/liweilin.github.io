@@ -1,0 +1,103 @@
+.digital {
+    background: url('/image/bg/data-bg.png') no-repeat center center transparent;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    @include flexbox-gap-wrap(row, center, space-around, 16px, wrap);
+    padding: 0 100px;
+
+    @include for-pro-10-p {
+        padding: 0 50px;
+    }
+
+    @include for-desktop {
+        padding: 0 50px;
+    }
+
+    @include for-phone {
+        padding: 0 25px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, .2);
+        @include background-blur(5px);
+        width: 100%;
+        height: 100%;
+    }
+
+    .counter-box {
+        display: grid;
+        place-items: center;
+        gap: 12px;
+        position: relative;
+        color: var(--white);
+        padding: 21vh 0;
+        z-index: 1;
+
+        @include for-pro-12-p {
+            padding: 10vh 0;
+        }
+
+        @include for-pro-10-p {
+            padding: 10vh 0;
+        }
+
+        @include for-desktop {
+            padding: 15vh 0;
+        }
+
+        @include for-phone {
+            padding: 2vh 0;
+            gap: 6px;
+        }
+
+        .counter {
+            position: relative;
+            font-size: 3rem;
+
+            @include for-pro-12-p {
+                font-size: 2.5rem;
+            }
+
+            @include for-pro-10-p {
+                font-size: 2.5rem;
+            }
+
+            @include for-desktop {
+                font-size: 2.5rem;
+            }
+            @include for-phone {
+                font-size: 2rem;
+            }
+        }
+
+        .plus {
+            &::after {
+                content: '+';
+                position: absolute;
+            }
+        }
+
+        &>h3 {
+            font-size: 2rem;
+
+            @include for-pro-12-p {
+                font-size: 1.5rem;
+            }
+
+            @include for-pro-10-p {
+                font-size: 1.5rem;
+            }
+
+            @include for-desktop {
+                font-size: 1.5rem;      
+            }
+            
+            @include for-phone {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}

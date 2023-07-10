@@ -1,0 +1,278 @@
+.banner {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  @include for-phone{
+    height: auto;
+  }
+
+  &>.swiper-wrapper {
+    .swiper-slide {
+      position: relative;
+
+      &>img {
+        object-fit: cover;
+      }
+
+      .swiper-slide-text {
+        display: grid;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        color: var(--white);
+        white-space: nowrap;
+        z-index: 1;
+        letter-spacing: 0.5px;
+
+
+        &>h2,
+        &>p,
+        .more-btn {
+          opacity: 1;
+          @include hide;
+          animation: fadeIn 0.6s ease-out 0.3s forwards;
+          text-shadow: 0px 4px 8px var(--boxShadow);
+        }
+
+        &>h2,&>p{
+          background-color: rgba(211,222,54,0.8);
+          text-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+          backdrop-filter: blur(10px);
+          padding: 16px;
+          @include for-phone{
+            padding: 4px;
+          }
+        }
+      }
+
+      &:first-child {
+        .swiper-slide-text {
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          padding: 8px;
+
+          &>h2 {
+            font-size: 5rem;
+            border-bottom: 3px solid var(--white);
+
+            @include for-pro-10-p {
+              font-size: 4.5rem;
+            }
+
+            @include for-desktop {
+              font-size: 4.5rem;
+            }
+
+            @include for-phone {
+              font-size: 1.5rem;
+            }
+          }
+
+          &>p {
+            font-size: 3rem;
+
+            @include for-pro-10-p {
+              font-size: 2.5rem;
+            }
+
+            @include for-desktop {
+              font-size: 2.5rem;
+            }
+
+            @include for-phone {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .swiper-slide-text {
+          text-align: center;
+          top: 50%;
+          left: 50%;
+
+          @include for-phone{
+            top:59%;
+          }
+
+          &>h2 {
+            font-size: 3rem;
+            line-height: 1.5;
+
+            @include for-pro-10-p {
+              font-size: 2.5rem;
+            }
+
+            @include for-desktop {
+              font-size: 2.5rem;
+            }
+
+            @include for-phone {
+              font-size: 1rem;
+            }
+          }
+
+          &>p {
+            font-size: 3rem;
+
+            @include for-pro-10-p {
+              font-size: 2.5rem;
+            }
+
+            @include for-desktop {
+              font-size: 2.5rem;
+            }
+
+            @include for-phone {
+              font-size: 1rem;
+            }
+          }
+
+          .more-btn {
+            background: var(--orange);
+            width: fit-content;
+            border-radius: 8px;
+            color: var(--white);
+            font-size: 1.5rem;
+            place-self: center;
+            padding: 12px;
+            text-shadow: none;
+            @include ease(.3s);
+            margin-top: 16px;
+
+            @include for-phone {
+              font-size: .75rem;
+              padding: 6px;
+            }
+
+            &:hover {
+              background: var(--green);
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        .swiper-slide-text {
+          text-align: left;
+          left: 20%;
+          bottom: 5%;
+
+          @include for-pro-10-p {
+            left: 25%;
+          }
+
+          @include for-desktop {
+            left: 25%;
+          }
+
+          @include for-phone {
+            left: 32%;
+          }
+
+          &>h2 {
+            font-size: 3rem;
+
+            @include for-pro-10-p {
+              font-size: 2.5rem;
+            }
+
+            @include for-phone {
+              font-size: 1.25rem;
+            }
+
+            @include for-desktop {
+              font-size: 2.5rem;
+            }
+
+            @include for-phone {
+              font-size: 1.25rem;
+            }
+          }
+
+          &>p {
+            font-size: 3rem;
+
+            @include for-pro-10-p {
+              font-size: 2.5rem;
+            }
+
+            @include for-desktop {
+              font-size: 2.5rem;
+            }
+
+            @include for-phone {
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Swiper pagination */
+  &>.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Swiper button */
+  &>.swiper-button-prev,
+  &>.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    color: var(--white);
+    @include translateY(-50%);
+    z-index: 10;
+
+    @include for-phone{
+      top: 16%;
+    }
+
+    &::after {
+      @include for-phone {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  /* Swiper button previous */
+  &>.swiper-button-prev {
+    left: 16px;
+
+    @include for-phone {
+      left: 6px;
+    }
+  }
+
+  /* Swiper button next */
+  &>.swiper-button-next {
+    right: 16px;
+
+    @include for-phone {
+      right: 6px;
+    }
+  }
+
+  &>.swiper-button-disabled {
+    @include hide;
+    visibility: hidden;
+  }
+}
+
+/* Swiper slide text animation keyframes */
+@keyframes fadeIn {
+  from {
+    @include hide;
+    transform: translate3d(0, 30px, 0);
+  }
+
+  to {
+    @include show;
+    transform: none;
+  }
+}

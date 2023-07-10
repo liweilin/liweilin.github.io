@@ -1,0 +1,60 @@
+@mixin mac-scrollbar-style {
+    
+    /* for firefox */
+    overflow-y: scroll;
+    scrollbar-color: var(--orange) transparent;
+    scrollbar-width: thin;
+    /* for firefox end */
+
+    &::-webkit-scrollbar {
+        background: transparent;
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--orange);
+        border-radius: 16px;
+        border: none;
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-corner { 
+        background: transparent;
+    }
+}
+
+@mixin hide-scrollbar{
+        /* for firefox */
+        overflow-y: scroll;
+        scrollbar-color: transparent;
+        /* for firefox end */
+    
+        &::-webkit-scrollbar {
+            background: transparent;
+            display: none;
+        }
+    
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            border: none;
+        }
+    
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+    
+        &::-webkit-scrollbar-corner { 
+            background: transparent;
+        }
+}

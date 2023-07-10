@@ -1,0 +1,189 @@
+.article.cover{
+  // max-width: 1200px;
+  // max-height: 600px;
+  max-height: 50vh;
+  object-fit: cover;
+  margin-top: 64px;
+
+}
+.articleContainer{
+  @include flexbox(column,center,center);
+  padding: 100px;
+  padding-top: 0px;
+
+  @include for-phone{
+    padding: 0 0 72px 0;
+  }
+  h1 {
+    position: relative;
+    color: var(--black);
+    margin: 40px 0;
+    padding: 0 16px;
+    @include for-pad{
+      margin: 40px 20px;
+      text-align: justify;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background: var(--lightGreen);
+      width: 100%;
+      height: 5px;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+  h3{
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+    @include for-phone{
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+  }
+  .content{
+    color: var(--black);
+    @include fill-available;
+    max-width: 1200px;
+    padding: 40px 0;
+
+    @include for-phone{
+      padding: 20px;
+    }
+    .img-container{
+      text-align: center;
+      margin-bottom: 40px;
+      img{
+        max-width: 800px;
+      }
+    }
+
+    .content-list{
+      @include grid(row,repeat(1,1fr),auto,unset,0px);
+      border: 1px solid var(--border);
+      margin-bottom: 40px;
+      li{
+        margin: 0;
+        padding: 16px;
+        border-bottom: 1px solid var(--border);
+        
+        h2,h3{
+          width: fit-content;
+          margin-bottom: 8px;
+          border-bottom: 3px solid var(--lightGreen);
+        }
+        h3{
+          line-height: 2.5rem;
+        }
+        p{
+          padding: 0;
+          
+        }
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+    }
+    h2{
+      font-size:1.75rem;
+      line-height: 2.5rem;
+      width: fit-content;
+      letter-spacing: 1.15px;
+      margin-bottom: 24px;
+
+      @include for-phone{
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+      }
+    }
+    p{
+      font-weight: 300;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+      letter-spacing: 1.15px;
+      padding-bottom: 40px;
+
+      @include for-phone{
+        font-size: 1.125rem;
+      }
+    }
+      .aicare-treatment{
+        border: 2px solid var(--orange);
+        padding: 32px;
+        background-color: rgba(243,152,0,0.1);
+        margin-bottom: 40px;
+        @include for-pad{
+          padding: 32px;
+        }
+        @include for-phone{
+          padding: 24px;
+        }
+        .title{
+          padding-bottom: 8px;
+        }
+        .note{
+          padding: 16px 0;
+          font-weight: 400;
+          font-size: 1rem;
+        }
+        ol{
+          @include flexbox(column, start, start);
+          gap: 2px;
+          
+          li{
+            @include flexbox(row, center, start);
+            gap: 16px;
+            background-color: var(--white);
+            padding: 24px 16px;
+            width: 100%;
+            @include for-pad{
+              @include flexbox(column, start, start);
+            }
+
+            h3{
+              border-right: 3px solid var(--orange);
+              min-width: fit-content;
+              padding-right: 16px;
+              margin: 0;
+              font-size: 1.5rem;
+            }
+    
+            .description{
+              padding: 0;
+              padding-top: 8px;
+              font-size: 1.125rem;
+              }
+          }
+        }
+        }
+    }
+  }
+  .share{
+    @include flexbox(column,center,center);
+    border-top: 4px solid var(--lightGreen);
+    border-bottom: 4px solid var(--lightGreen);
+    padding: 40px 0;
+    color: var(--fontColor);
+
+    .shareList a{
+      padding: 8px;
+      border-radius: 20%;
+      margin: 16px 4px 0 4px;
+      color: var(--fontColor);
+      border: 1px solid var(--fontColor);
+      @include ease(0.2s);
+    }
+
+    .shareFacebook:hover{
+      border: 1px solid var(--facebookColor);
+      color: var(--facebookColor);
+    }
+
+    .shareLine:hover{
+      border: 1px solid var(--lineColor);
+      color: var(--lineColor);
+    }
+  }
+  .link-text{
+    margin-top: 20px;
+  }

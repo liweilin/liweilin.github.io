@@ -1,0 +1,411 @@
+.service{
+  width: 100%;
+  input[type="radio"] {
+    @include s-tabs(1.25rem,"#service-tab", ".panel", "#panel-service");
+    // s-tabs($fontsize,$tabsID, $panelClass, $panelID)
+  }
+
+}
+.prolotherapy{
+  margin-top: 40px;
+  color: var(--black);
+  @include flexbox(column,center,start);
+
+  span.highlight{
+    background-color: var(--lightGreen);
+    padding: 0 2px;
+    font-weight: 400;
+  }
+  .cover{
+    background-color: var(--lightGreen);
+    @include flexbox(row,end,space-around);
+    gap: 40px;
+    @include for-pad{
+      @include flexbox(column,end,space-around);
+      gap: 0px;
+    }
+    .main-point{
+      padding: 32px;
+      background-color: var(--white);
+      box-shadow: 0px 25px 60px -15px rgba(0, 0, 0, 0.15);
+      margin: 120px 0 120px 100px;
+      @include for-pad{
+        margin:  80px;
+        margin-bottom: 64px;
+      }
+      @include for-phone{
+        margin: 20px;
+        margin-top: 50px;
+        box-shadow: 0px 10px 30px -15px rgba(0, 0, 0, 0.15);
+      }
+      h1{
+        margin-bottom: 16px;
+        
+      }
+    }
+    img{
+      width: 40%;
+      @include for-pad{
+        width: 100%;
+      }
+    }
+  }
+  article{
+    padding: 120px 100px;
+    max-width: 1440px;
+    @include for-pad{
+      padding: 80px;
+    }
+    @include for-phone{
+      padding: 40px 20px;
+    }
+    h2{
+      font-size: 2.5rem;
+      margin-bottom: 32px;
+      @include for-phone{
+        font-size: 2rem;
+      }
+    }
+    h3{
+      font-size: 1.75rem;
+      margin-bottom: 32px;
+      @include for-phone{
+        margin-bottom: 16px;
+        font-size: 1.5rem;
+      }
+    }
+    /* 治療種類區塊 */
+    .therapy-type{
+      ul{
+        @include grid(column,1fr 1fr 1fr, auto, unset, 0);
+        border: 1px solid var(--border);
+        @include for-pad{
+          @include grid(row,auto,1fr 1fr 1fr, unset, 0);
+        }
+        li{
+          width: 100%;
+          border: unset;
+          gap: 8px;
+          @include flexbox(column, start, start);
+          border-right: 1px solid var(--border);
+          padding: 32px;
+          @include for-pad{
+            padding: 32px;
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+          }
+          @include for-phone{
+            padding: 24px;
+          }
+          &:last-child{
+            border-right: none;
+            text-align: left;
+          }
+          h3{
+            border-bottom: 3px solid var(--lightGreen);
+            width: fit-content;
+            padding-bottom: 4px;
+            @include for-pad{
+              margin-bottom: 8px;
+            }
+          }
+          .description{
+            height: 100%;
+          }
+          
+        }
+      }
+    }
+    /* 治療種類區塊結束 */
+
+    /* 適用症狀區塊 */
+    .symptom{
+      display: block;
+      padding-left: unset;
+      overflow: auto;
+      @include for-phone{
+        padding: 60px 0;
+      }
+      .container{
+        @include grid(row,1fr 2fr, auto, unset, 24px);
+        @include for-pad{
+          @include grid(column,auto, auto auto, unset, 24px);
+        }
+        ul{
+          // @include flexbox-wrap(row,start,start,wrap);
+          // gap: 16px;
+          @include grid(row,50% 50%, auto, unset, 16px);
+          height: fit-content;
+          @include for-pad{
+            @include grid(row,1fr 1fr 1fr, auto, unset, 16px);
+          }
+          @include for-phone{
+            @include grid(row,1fr 1fr, auto, unset, 16px);
+          }
+          li{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: var(--lightGreen);
+            box-shadow: 2px 2px 5px 0 var(--boxShadow);
+            @include flexbox(row,center,center);
+            @include for-pad{
+              width: 180px;
+              height: 180px;
+            }
+            @include for-phone{
+              width: 40vw;
+              height: 40vw;
+            }
+            h4{
+              font-size: 1.5rem;
+            }
+          }
+        }
+        img{
+          // max-width: 800px;
+          height: auto;
+        }
+      }
+
+    }
+    /* 適用症狀區塊結束 */
+
+    /* 治療週期區塊 */
+    .treatment{
+      @include flexbox(column,start,space-around);
+      .container{
+        @include grid(row,1fr 1fr, auto, unset, 24px);
+        margin-bottom: 80px;
+        @include for-pad{
+          @include grid(column,auto, auto auto, unset, 24px);
+        }
+      }
+      .process-container{
+        @include grid(row,1fr 1fr, auto, unset, 24px);
+        @include for-pad{
+          @include grid(column,auto, auto auto, unset, 24px);
+        }
+        @include for-phone{
+          gap: 48px;
+        }
+        img{
+          height: auto;
+        }
+        .notice{
+          ul{
+            // background-color: var(--lightGrayf9);
+            li{
+              padding: 8px 16px;
+              border-bottom: 1px solid var(--border);
+              background-color: var(--lightGrayf9);
+              font-size: 1rem;
+              &:hover{
+                background-color: var(--white);
+                @include ease(.2s);
+                // box-shadow: 0 0 5px 0 var(--boxShadow);
+                z-index: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    /* 治療週期區塊結束 */
+  }
+}
+
+.smarc{
+  width: 100%;
+  margin-top: 40px;
+  color: var(--black);
+  @include flexbox(column,center,start);
+
+  span.highlight{
+    background-color: var(--lightGreen);
+    padding: 0 2px;
+    font-weight: 400;
+  }
+  .cover{
+    background:url("../../image/bg/cover-smarc.jpg") no-repeat fixed center;
+    @include flexbox(row,center,center);
+    width: 100%;
+    gap: 40px;
+    @include for-pad{
+      gap: 0px;
+    }
+    .main-point{
+      padding: 32px;
+      background-color: var(--white);
+      box-shadow: 0px 25px 60px -15px rgba(0, 0, 0, 0.15);
+      margin: 120px auto 120px auto;
+      max-width: 60vw;
+      @include for-pad{
+        margin:  40px auto;
+      }
+      @include for-phone{
+        box-shadow: 0px 10px 30px -15px rgba(0, 0, 0, 0.15);
+        max-width: 80vw;
+      }
+      h1{
+        margin-bottom: 16px;
+        
+      }
+    }
+  }
+  article{
+    padding: 120px 100px;
+    max-width: 1440px;
+    @include for-pad{
+      padding: 80px;
+    }
+    @include for-phone{
+      padding: 40px 20px;
+    }
+    h2{
+      font-size: 2.5rem;
+      margin-bottom: 32px;
+      @include for-phone{
+        font-size: 2rem;
+      }
+    }
+    h3{
+      font-size: 1.75rem;
+      margin-bottom: 32px;
+      @include for-phone{
+        margin-bottom: 16px;
+        font-size: 1.5rem;
+      }
+    }
+    /* 差異區塊 */
+    .difference{
+      ul{
+        @include grid(column,repeat(2,1fr), auto auto, unset, 1px);
+        border: 1px solid var(--border);
+        background-color: var(--border);
+        @include for-pad{
+          @include grid(row,auto,repeat(4,1fr), unset, 0);
+        }
+        li{
+          width: 100%;
+          border: unset;
+          gap: 8px;
+          @include flexbox(column, start, start);
+          background-color: white;
+          padding: 32px;
+          @include for-pad{
+            padding: 32px;
+            border-right: none;
+            border-bottom: 1px solid var(--border);
+          }
+          @include for-phone{
+            padding: 24px;
+          }
+          &:last-child{
+            border-right: none;
+            text-align: left;
+          }
+          h3{
+            background-color:var(--lightGreen);
+            width: fit-content;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            padding: 4px;
+            @include for-pad{
+              margin-bottom: 8px;
+            }
+          }
+          .description{
+            height: 100%;
+            li{
+              padding: 0;
+              padding-bottom: 4px;
+              list-style: decimal;
+              display: list-item;
+              list-style-position: inside;
+              margin-bottom: 8px;
+              border-bottom: 1px solid var(--lightGreen);
+            }
+          }
+        }
+      }
+    }
+    /* 差異區塊結束 */
+
+    /* 器材區塊 */
+    .equipment{
+      display: block;
+      padding-left: unset;
+      margin-bottom: 80px;
+      @include for-phone{
+        padding: 60px 0;
+      }
+      .container{
+        @include grid(row,1fr 2fr, auto, unset, 24px);
+        @include for-pad{
+          @include grid(column,auto, auto auto, unset, 24px);
+        }
+        ul{
+          // @include flexbox-wrap(row,start,start,wrap);
+          // gap: 16px;
+          @include grid(row,50% 50%, auto, unset, 16px);
+          height: fit-content;
+          @include for-pad{
+            @include grid(row,1fr 1fr 1fr, auto, unset, 16px);
+          }
+          @include for-phone{
+            @include grid(row,1fr 1fr, auto, unset, 16px);
+          }
+          li{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: var(--lightGreen);
+            box-shadow: 2px 2px 5px 0 var(--boxShadow);
+            @include flexbox(row,center,center);
+            @include for-pad{
+              width: 180px;
+              height: 180px;
+            }
+            @include for-phone{
+              width: 40vw;
+              height: 40vw;
+            }
+            h4{
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .eqsmarc{
+          padding: 64px;
+          .swiper-slide{
+            text-align: center;
+            background-color: white;
+            img{
+              height: fit-content;
+              max-width: 280px;
+              margin: 24px;
+            }
+            h4{
+              font-size: 1.75rem;
+              letter-spacing: 1.15px;
+            }
+            .part-section{
+              width: 100%;
+              background-color: var(--orange);
+              padding: 16px 0;
+              margin-top: 24px;
+              box-shadow: 0px 5px 30px -5px var(--boxShadow);
+              .title{
+                font-size: 1.25rem;
+                margin-bottom: 4px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    /* 器材區塊結束 */
+  }
+}

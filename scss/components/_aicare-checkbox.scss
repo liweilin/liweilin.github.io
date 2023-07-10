@@ -1,0 +1,49 @@
+.aicare-checkbox {
+  @include flexbox(row, center, flex-start);
+  cursor: pointer;
+  & > input {
+    display: none;
+
+    &:checked {
+      & + label {
+        &::before{
+          border: 12px solid var(--orange);
+        }
+        &::after{
+          @include show;
+        }
+      }
+    }
+  }
+
+  & > label {
+    position: relative;
+    cursor: pointer;
+    margin-left: 32px;
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid var(--fontColor);
+      border-radius: 5px;
+      width: 24px;
+      height: 24px;
+      top: -2px;
+      left: -32px;
+      @include ease(0.2s);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border: 3px solid var(--white);
+      width: 9px;
+      height: 15px;
+      left: -25px;
+      top: 1px;
+      border-top: 0;
+      border-left: 0;
+      @include hide;
+      transform: rotate(45deg);
+      @include ease(0.2s);
+    }
+  }
+}

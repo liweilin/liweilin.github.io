@@ -1,8 +1,535 @@
-<!-- <html> -->
-hello world
+<!doctype html>
+<html>
 
-<script>
-window.onload = function() {
-    location.href = "https://choujrying.wixsite.com/portfolio/works";
-}
-  </script>
+<head>
+    <meta charset="utf-8">
+    <title>生生優動 AiCare</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="" />
+    <meta name="DC.Publisher" content="生生優動" />
+    <meta name="DC.Description" content="" />
+    <meta name="DC.Type" content="website" />
+    <meta itemprop="name" content="生生優動">
+    <meta itemprop="description" content="">
+    <meta property="og:title" content="生生優動" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="生生優動" />
+    <meta property="og:description" content="" />
+    <link rel="image_src" href="" type="image/jpeg" />
+    <link rel="shortcut icon" href="">
+    <link rel="apple-touch-icon" href="">
+    <link rel="icon" href="https://event.aicarept.com/static/img/logo_32.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="https://event.aicarept.com/static/img/logo_32@2x.png" sizes="32*32" type="image/png">
+
+    <!-- fontaewsom pro -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+
+    <!-- default.css -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <!-- loading page -->
+    <div class="launchScreen">
+        <div class="ci">
+            <object type="image/svg+xml" data="image/other/ci.svg"></object>
+            <object type="image/svg+xml" data="image/other/text_1.svg"></object>
+            <object type="image/svg+xml" data="image/other/text_2.svg"></object>
+        </div>
+    </div>
+    <!-- 標題＋Nav -->
+    <header class="header">
+        <a href="index.html" class="ci">
+            <img src="image/ci/ci-vertically.png">
+        </a>
+        <nav>
+            <!-- <a href="prolotherapy.html">治療服務</a> -->
+            <button class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">治療服務</a>
+            <div class="dropdown-content">
+              <a href="prolotherapy.html">增生治療</a>
+              <a href="physiotherapy.html">物理治療</a>
+              <a href="course.html">運動課程</a>
+            </div>
+            </button>
+            <a href="team.html">專業團隊</a>
+            <a href="location.html">分院介紹</a>
+            <a href="blog.html">疼痛小百科</a>
+            <button type="button" class="reservation-btn">預約</button>
+            <a href="https://www.facebook.com/AICare.PT" target="_blank" class="fa-brands fa-facebook icon"></a>
+            <a href="https://lin.ee/6S3hww9" target="_blank" class="fa-brands fa-line icon"></a>
+        </nav>
+        <button type="button" class="fa-solid fa-bars-staggered icon mobile-nav-switch"></button>
+    </header>
+    <!-- Banner Slideshow -->
+    <section class="banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide reservation-btn">
+                <img src="image/banner/banner_1-3.jpg">
+                <!-- <div class="swiper-slide-text ">
+                    <h2>全台第一家</h2>
+                    <p>新型態疼痛診所暨物理治療所</p>
+                </div> -->
+            </div>
+            <div class="swiper-slide">
+                <img src="image/banner/banner_2-1.jpg">
+                <!-- <div class="swiper-slide-text ">
+                    <h2>整天腰痠背痛，哪天才是個盡頭？</h2>
+                    <p>找出疼痛根源，帶您遠離疼痛</p>
+                    <a href="#" class="more-btn">了解更多</a>
+                </div> -->
+            </div>
+            <div class="swiper-slide reservation-btn">
+                <img src="image/banner/banner_3.jpg">
+            </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+    <!-- 症狀 -->
+    <section class="symptom" data-aos="fade-up">
+        <h1>你可能也有這些疼痛症狀</h1>
+        <div class="swiper-wrapper">
+            <a href="article-sciatica.html" class="swiper-slide">
+                <img src="image/pain/pain_1.jpg">
+                <div class="swiper-slide-text ">
+                    <h2>慘！坐辦公室太久竟然會「痛」上身</h2>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+            <a href="article-osteoarthritis.html" class="swiper-slide">
+                <img src="image/pain/pain_2.png">
+                <div class="swiper-slide-text ">
+                    <h2>跑者的困境：膝蓋痛如何摧毀熱愛運動的40歲上班族！</h2>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+            <a href="article-mothersThumb.html" class="swiper-slide">
+                <img src="image/pain/pain_4.jpg">
+                <div class="swiper-slide-text ">
+                    <h2>手部疼痛困擾新手媽媽？擁有健康雙手，媽媽生活更加輕鬆自在！</h2>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+            <a href="article-epicondylitis.html" class="swiper-slide">
+                <img src="image/pain/pain_5.jpg">
+                <div class="swiper-slide-text ">
+                    <h2>手肘痛？不打網球也有可能有網球肘？</h2>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+            <a href="article-frozen-shoulder.html" class="swiper-slide">
+                <img src="image/pain/pain_3.jpg">
+                <div class="swiper-slide-text ">
+                    <h2>揮別困擾多年的肩頸痠痛</h2>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+            <a href="article-footPain.html" class="swiper-slide">
+                <img src="image/pain/pain_6.jpg">
+                <div class="swiper-slide-text ">
+                    <h2>剛起床腳就痛！？到底是怎麼回事？</h2>
+                    <div class="arrow"></div>
+                </div>
+            </a>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+    <!-- 專業團隊 -->
+    <section class="team">
+        <article data-aos="fade-up">
+            <h1>專業團隊</h1>
+            <div>台大權威物理治療專家林訓正聯手領軍</div>
+            <div>每位治療師都協助過上百位個案，搭配報告綜合分析出身體核心問題</div>
+            <div>針對疼痛部位進行專業的徒手治療、緩解不適</div>
+            <div>同時提升接下來的運動復健成效。 </div>
+        </article>
+        <img src="image/other/doctors.jpg" data-aos="fade-up">
+    </section>
+    <!-- 數據分析 -->
+    <section class="digital">
+        <article class="counter-box">
+            <div class="counter" data-number="9">0</div>
+            <h3>連鎖物理治療所/診所</h3>
+        </article>
+        <article class="counter-box">
+            <div class="counter plus" data-number="50">0</div>
+            <h3>專業醫療團隊</h3>
+        </article>
+        <article class="counter-box">
+            <div class="counter plus" data-number="20">0</div>
+            <h3>運動管理師</h3>
+        </article>
+        <article class="counter-box">
+            <div class="counter plus" data-number="30000">0</div>
+            <h3>看診人數</h3>
+        </article>
+    </section>
+    <!-- google 評論 -->
+    <section class="comment" data-aos="fade-up">
+        <h1>網友五星好評推薦</h1>
+        <div class="swiper-wrapper">
+            <article class="swiper-slide">
+                <header>
+                    <h4>MW Chang</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        因為肩胛骨疼痛來找「袁福鍇物理治療師」做治療，一對一詳細評估發現還有頸椎影響肩關節的活動，除了利用徒手治療處理症狀，運動訓練也會依患者能力作調整，現在日常生活伸手拿東西也覺得很輕鬆！🥺
+                        因為有物理治療師的專業評估跟治療，讓我可以找到問題源頭、對症下藥，對自己的身體更加理解，也能增加生活品質！
+                        另外生生的治療空間寬敞、乾淨，一進到治療室就覺得很放鬆、安心。
+                        謝謝袁福鍇物理治療師的治療，我會推薦周圍有需要的人來找他，大推讚讚👍
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>Mike</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        肩膀肌腱拉傷痛了好一陣子，到了生生優動診所，厚鈞治療師的專業評估及徒手治療讓我能夠在短期內達到減輕疼痛的效果，並提供專業的居家復健的動作，讓肩膀有全方面的治療效，值得推薦。
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>Cheng Nina</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        蔡孟瑜物理治療師 幫我解決長期困擾的高低肩 同時也改善了我的烏龜頸！朋友都說我治療之後變瘦了（其實只是烏龜頸改善之後、視覺上的改變😆）真是治療的意外驚喜
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>苹安</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        有次天冷未做足暖身，直接拉筋，結果大腿內側肌肉還是肌腱？直接攣縮，天啊！拖著走路1個禮拜後拖著跛腳去找正琪老師，老師有趣又專業。
+                        走出門口是正常腳伐👣，經過幾次的治療，現在已經箭步如飛了！！真是太神奇了！
+                        讚嘆巧手張老師！！也謝謝前線的管理師貼心的電訪提醒，到診所時親切且溫暖的服務。可以感受出店經理對員工的教育訓練有素，人員專業有溫度的關懷^_^
+                        生生優動的老闆，請您一定要看到我的評論啊～！！好好表揚辛苦的大家！！
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>潘敏</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        前台都很年輕，很熱情，治療師張志谦對客人非常用心，技術－流， 我的肩頸腰痛膝蓋都改善了非常多，會持續來治療
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>Lin T</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        陳恩賜老師誠如其名！對有疼痛問題的人 正是老天爺的恩賜。
+                        專業的告知問題所在 關節 肌腱 小肌肉 發炎或積水等……如何的發生及牽連。徒手治療並教授緩解運動 認真親切無微不至！
+                        其他的工作人員 健身教練亦是笑容可掬 關心備至 可愛專業。
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>葛萌</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        腳踝骨折開刀兩個月後無法行走 在大醫院復健治療毫無進展 經由程冠傑老師治療後 第一次明顯消腫 第二次就持柺杖能行走 目前治療一個月了 已不用柺杖走路
+                        非常感謝冠傑老師的耐心治療🙏
+                        櫃檯人員也都非常親切貼心
+                        是個非常好的物理治療中心～大推
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>Ryan Liu</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        顏醫師/鐘醫師 ，兩位醫師專業又親切。把我很多年的疼痛，有系統性的解決，也把疼痛和修復的背後原理與邏輯解釋得非常清楚。前台很耐心地接待和安排療程。👍🏻
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>Haruka Shinno</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        陳院長很厲害💯五次的療程加上運動教學，讓我持續好幾年的不適感幾乎消失，很久沒有感受到身體如此輕鬆😊陳院長會仔細分析造成痠痛的原因，然後找到問題點再解決，並且分享很多正確觀念。回家的運動&姿勢也很重要，不能單單依賴治療達到效果，自己也要努力才能消除病痛的根源
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <header>
+                    <h4>鹿仙貝</h4>
+                    <img src="image/other/google-icon.svg">
+                </header>
+                <div class="swiper-slide-text ">
+                    <div class="star-rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="message">
+                        錢物理治療師很專業，對我來說，除了體驗當下的徒手治療有幫助外，治療師教我的復健運動，帶給我的幫助很大，遠多過平時我習慣的盲人按摩只有治標舒緩，我覺得這樣的專業知識是有價值的，推薦給想試試看的人可以指定這位治療師。
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+    <!-- Sitemap + 留言 + ＦＢ + 版權 -->
+    <footer class="colophon">
+        <div class="colophon-top">
+            <!-- <section class="facebook-fan-group" data-aos="fade-up">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAICare.PT%2Fposts%2Fpfbid0cEukpj4cmGzGdBzwZ7EGqD5himxvGUn9XMqYGtowY2Bk4TFB5CADuwTx1y96EKR6l&show_text=true&width=100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" data-share-text="false"></iframe>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAICare.PT%2F&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=1012380913506173" width="400" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </section> -->
+                <section class="facebook-fan-group" data-aos="fade-up">
+                    <div class="fb-page" data-href="https://www.facebook.com/AICare.PT/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/AICare.PT/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AICare.PT/">生生優動  診所暨運動物理治療所</a></blockquote></div>
+                </section>
+           
+            <section class="reservation" data-aos="fade-up">
+                <header>
+                    <img src="image/ci/ci-horizontal.png">
+                    <small>專人聯繫 完成預約</small>
+                </header>
+                <form action="#">
+                    <div class="aicare-textfield">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="請輸入姓名" required>
+                    </div>
+                    <div class="aicare-selector">
+                        <label for="sex">性別</label>
+                        <select>
+                            <option value="1" selected>男</option>
+                            <option value="2">女</option>
+                        </select>
+                    </div>
+                    <div class="aicare-textfield">
+                        <label for="phone">聯絡手機</label>
+                        <input type="text" id="phone" onkeyup="this.value=this.value.replace(/[^0-9+]+/,'')"
+                            placeholder="請輸入聯絡手機" pattern="\d*" required>
+                    </div>
+                    <div class="aicare-textfield">
+                        <label for="phone">室內電話</label>
+                        <input type="text" id="phone" onkeyup="this.value=this.value.replace(/[^0-9+]+/,'')"
+                            placeholder="請輸入室內電話" pattern="\d*" required>
+                    </div>
+                    <div class="aicare-selector">
+                        <label for="reserve">預約分院</label>
+                        <select id="reserve" required>
+                            <option value="0" selected>請選擇分院</option>
+                            <option value="1">忠孝新生分院</option>
+                            <option value="2">天母分院</option>
+                            <option value="3">民生分院</option>
+                            <option value="4">內湖分院</option>
+                            <option value="5">板橋分院</option>
+                            <option value="6">雙和分院</option>
+                            <option value="7">林口分院</option>
+                        </select>
+                    </div>
+                    <div class="aicare-selector">
+                        <label for="contact">方便專人聯絡的時間</label>
+                        <select id="contact" required>
+                            <option value="0" selected>請選擇聯絡時間</option>
+                            <option value="1">09:00 ~ 12:00</option>
+                            <option value="2">12:00 ~ 18:00</option>
+                            <option value="3">18:00 ~ 21:00</option>
+                        </select>
+                    </div>
+                    <div class="aicare-textfield">
+                        <label for="recommend">推薦人</label>
+                        <input type="text" id="recommend" placeholder="請填寫推薦人（非必填）">
+                    </div>
+                    <div class="aicare-checkbox">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">我已同意注意事項及個資告知事項</label>
+                    </div>
+                    <footer>
+                        <small>( 請注意！實際預約需在專人聯繫確認後，才算完成喔！ )</small>
+                        <button type="button" class="aicare-button">確認送出</button>
+                    </footer>
+                </form>
+            </section>
+        </div>
+        <div class="colophon-bottom">
+            <section class="sitemap">
+                <nav>
+                    <a href="index.html">首頁</a>
+                </nav>
+                <div class="s-menu">
+                    <nav>
+                        治療服務
+                    </nav>
+                    <nav>
+                        <a href="prolotherapy.html">增生治療</a>
+                    </nav>
+                    <nav>
+                        <a href="physiotherapy.html">物理治療</a>
+                    </nav>
+                    <nav>
+                        <a href="course.html">運動課程</a>
+                    </nav>
+                </div>
+                <nav>
+                    <a href="team.html">專業團隊</a>
+                </nav>
+                <nav>
+                    <a href="location.html">分院介紹</a>
+                </nav>
+                <nav>
+                    <a href="blog.html">疼痛小百科</a>
+                </nav>
+            </section>
+            <section class="contact">
+                <article class="customer-service">
+                    <h4><i class="fa-solid fa-headset icon"></i>客服專線</h4>
+                    <a href="tel:0227014155">02-2701-4155</a>
+                </article>
+                <article class="service-hours">
+                    <h4><i class="fa-solid fa-clock icon"></i>服務時間</h4>
+                    <div>上午 09:00am ~ 12:30pm</div>
+                    <div>下午 13:30pm ~ 17:00pm</div>
+                    <div>晚上 18:00pm ~ 21:30pm</div>
+                </article>
+                <div class="qrcode">
+                    <a href="https://lin.ee/6S3hww9" target="_blank">
+                        <img src="../image/other/lineqrcode.svg">
+                    </a>
+                    <a href="https://www.facebook.com/AICare.PT" target="_blank">
+                        <img src="../image/other/fbqrcode.svg">
+                    </a>
+                </div>
+            </section>
+        </div>
+        <small class="copyright">生生優動版權所有 © All Rights Reserved.</small>
+    </footer>
+    <button type="button" class="fa-solid fa-angle-up icon scrollTop"></button>
+</body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0&appId=1012380913506173&autoLogAppEvents=1" nonce="HczgAf4g"></script>
+<!-- 引用 jquery 3.6.1 -->
+<script src="js/jquery-3.6.4.min.js"></script>
+<!-- 引用 swiper   -->
+<script src="swiper/swiper-bundle.min.js"></script>
+<!-- 引用aos特效 -->
+<script src="aos-master/dist/aos.js"></script>
+<!-- launchSreen   -->
+<script src="js/launchScreen.js"></script>
+<!-- swiper 載入共同頁面  -->
+<script src="js/loading.js"></script>
+<!-- header固定 -->
+<script src="js/header.js"></script>
+<!-- counter -->
+<script src="js/counter.js"></script>
+<!-- scroll top  -->
+<script src="js/scrollTop.js"></script>
+<!-- reservation scroll -->
+<script src="js/reservate.js"></script>
+<!-- mobile-nav-switch -->
+<script src="js/mobile-nav-switch.js"></script>
+<!-- aos 初始化  -->
+<script src="js/aos.js"></script>
+<!-- swiper 初始化  -->
+<script src="js/swiper.js"></script>
+
+</html>

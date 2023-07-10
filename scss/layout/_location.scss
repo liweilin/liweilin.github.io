@@ -1,0 +1,142 @@
+.locationContainer{
+  padding: 100px 100px 40px 100px;
+  // max-width: 1200px;
+  // margin: auto;
+
+  @include for-phone{
+    padding: 72px 20px 32px 20px;
+  }
+    h1 {
+      position: relative;
+      width: fit-content;
+      color: var(--black);
+      margin: 40px auto 64px auto;
+
+      &::after{
+          content: "";
+          position: absolute;
+          background: var(--orange);
+          width: 100%;
+          height: 3px;
+          bottom: -10px;
+          left: 0px;
+      }
+  
+      @include for-desktop {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+      }
+  
+      @include for-phone {
+        font-size: 1.125rem;
+        margin-bottom: 40px;
+      }
+    }
+    ul{
+      color: var(--black);
+      width: 100%;
+      max-height: 800px;
+      @include flexbox-wrap(column,stretch,start,wrap);
+
+      gap: 0 20px;
+      @include for-phone{
+        max-height: unset;
+        flex-direction: column-reverse;
+      }
+      li{
+        padding: 32px;
+        background-color: var(--white);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        width: 50%;
+        flex-basis: 20%;
+        @include ease(.2s);
+        @include for-phone{
+          width: 100%;
+          padding: 24px 8px;
+        }
+        &:hover{
+          z-index: 1;
+          @include scale(1.02);
+          box-shadow: 0 3px 30px -10px var(--boxShadow);
+        }
+        a{
+          cursor: pointer;
+          color: var(--black);
+        }
+        &:hover .arrow{
+             @include translateX(10px);
+           }
+        h3{
+          font-weight: 500;
+          font-size: 1.5rem;
+          padding-bottom: 0.75rem;
+
+          @include for-phone{
+            font-size: 1rem;
+          }
+        }
+        h4{
+          font-weight: 300;
+          font-size: 1.125rem;
+          line-height: 1.5;
+          @include for-phone{
+            font-size: 0.875rem;
+          }
+        }
+        .nav{
+          color: var(--orange);
+          font-weight: 400;
+          font-size: 1.25rem;
+          position: absolute;
+          bottom: 32px;
+          right: 32px;
+          @include flexbox-gap(row, center, start,12px);
+          @include for-phone{
+            font-size: 1rem;
+            bottom: 16px;
+            right:16px;
+          }
+          .arrow {
+            position: relative;
+            background: var(--orange);
+            width: 24px;
+            height: 2px;
+            @include ease(.2s);
+  
+            &:after {
+              content: '';
+              position: absolute;
+              background: var(--orange);
+              width: 5px;
+              height: 2px;
+              right: 0;
+              top: -2px;
+              @include rotate(45deg);
+            }
+          }
+        }
+         &:last-child{
+          border: unset;
+          text-align: center;
+          padding: 20px 20px 0 20px;
+          &:hover{
+            z-index: 0;
+            @include scale(1);
+            box-shadow: unset;
+          }
+
+
+          @include for-phone{
+            padding: 0 0 20px 0;
+            height: unset;
+          }
+         } 
+      }
+    }
+  }
+  section.facility{
+    padding:40px 100px 40px 100px;
+    @include flexbox(column, center, start);
+  }
